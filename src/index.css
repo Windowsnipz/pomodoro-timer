@@ -1,5 +1,5 @@
 body {
-  background: var(--gray2);
+  background-color: var(--gray2);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
