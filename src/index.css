@@ -1,8 +1,5 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: var(--gray2);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +7,161 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --blue1: #e4f1fe;
+  --blue2: #8dc6ff;
+  --gray1: #22313f;
+  --gray2: #34495e;
+  --orange1: #F88F1F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  height: 10vh;
+  border-bottom: 2px solid var(--orange1);
+  background: var(--gray1);
+}
+
+#navbar img {
+  max-width: 100px;
+  max-height: 80%;
+  padding-left: 15px;
+}
+
+
+#nav-links a {
+  padding: 0 40px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  color: var(--blue1);
+}
+
+@media (max-width: 450px) {
+  #nav-links a {
+      padding: 0 7px;
+  }
+  #nav-links {
+      padding-right: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-wrapper span {
+      font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #nav-links a {
+      font-size: 1.35rem;
+  }
+  #navbar img {
+      padding-left: 30px;
+  }
+  .section {
+      padding: 15px 30px;
+  }
+  .project-wrapper {
+      max-width: 33%;
+  }
+  main div {
+      width: 10%;
+  }
+}
+
+/* Section class*/
+#quote-box {
+  width: 75%;
+  max-width: 900px;
+  color: var(--blue1);
+  text-align: center;
+  padding: 20px ;
+  border-radius: 30px;
+  background-color: var(--gray1);
+  scroll-margin-top: 10vh; /* Ensures correct scrolling from the navbar */
+  margin-top: 130px /* margin below navbar, removed for React*/
+}
+
+
+/* Input-wrapper */
+#input-wrapper {
+  border: 2px solid var(--orange1);
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  background-color: var(--gray2);
+}
+
+#input-wrapper h4 {
+  padding: 10px 0;
+}
+
+.btn {
+  display: block;
+  margin: 5px auto;
+  padding: 8px;
+  font-family: Helvetica, sans-serif;
+  /*font-weight: 900;*/
+  font-size: large;
+  border-radius: 5px;
+  border: 1px solid var(--gray1);
+  color: var(--blue1);
+  background-color: var(--gray1);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: var(--gray1);
+  background-color: var(--blue1);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.btn:active {
+  color: var(--orange1);
+  background-color: var(--orange1);
+}
+
+#tweet-quote { /* anchor element for tweet button */
+  text-decoration: none;
+}
+
+#result-text {
+  margin: auto 50px;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  
+  color: var(--blue1);
+  font-size: smaller;
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--gray1);
+}
+
+footer p {
+  padding: 0 20px;
 }
