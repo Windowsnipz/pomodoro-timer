@@ -5,32 +5,24 @@ function ClockSettings({ sessionLength, breakLength, changeSessionLength, change
     const sessionDecrement = () => {
         if (sessionLength > 1) {
             changeSessionLength(sessionLength - 1);
-        } else {
-            alert('Session length must be greater than 1 minute.');
         }
     }
 
     const sessionIncrement = () => {
         if (sessionLength < 60) {
             changeSessionLength(sessionLength + 1);
-        } else {
-            alert('Session length must be less than 60 minutes.');
         }
     }
 
     const breakDecrement = () => {
         if (breakLength > 1) {
             changeBreakLength(breakLength - 1);
-        } else {
-            alert('Break length must be greater than 1 minute.');
         }
     }
 
     const breakIncrement = () => {
         if (breakLength < 60) {
             changeBreakLength(breakLength + 1);
-        } else {
-            alert('Break length must be less than 60 minutes.');
         }
     }
 
