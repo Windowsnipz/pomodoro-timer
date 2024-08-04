@@ -1,21 +1,21 @@
 import React from 'react';
 
-function ClockSettings({ defaultSessionLength, defaultBreakLength, changeSessionLength, changeBreakLength }) {
+function ClockSettings({ sessionLength, breakLength, changeSessionLength, changeBreakLength }) {
 
     const sessionDecrement = () => {
-        changeSessionLength(defaultSessionLength - 1);
+        changeSessionLength(sessionLength - 1);
     }
 
     const sessionIncrement = () => {
-        changeSessionLength(defaultSessionLength + 1);
+        changeSessionLength(sessionLength + 1);
     }
 
     const breakDecrement = () => {
-        changeBreakLength(defaultBreakLength - 1);
+        changeBreakLength(breakLength - 1);
     }
 
     const breakIncrement = () => {
-        changeBreakLength(defaultBreakLength + 1);
+        changeBreakLength(breakLength + 1);
     }
 
     return (
@@ -27,7 +27,7 @@ function ClockSettings({ defaultSessionLength, defaultBreakLength, changeSession
                 </div>
                 <div>
                     <button id="break-decrement" onClick={breakDecrement}>Decrement</button>
-                    <h3 id="break-length">{defaultBreakLength}</h3>
+                    <h3 id="break-length">{breakLength}</h3>
                     <button id="break-increment" onClick={breakIncrement}>Increment</button>
                 </div>
             </div>
@@ -37,7 +37,7 @@ function ClockSettings({ defaultSessionLength, defaultBreakLength, changeSession
                 </div>
                 <div>
                     <button id="session-decrement" onClick={sessionDecrement}>Decrement</button>
-                    <h3 id="session-length">{defaultSessionLength}</h3>
+                    <h3 id="session-length">{sessionLength}</h3>
                     <button id="session-increment" onClick={sessionIncrement}>increment</button>
                 </div>
             </div>
