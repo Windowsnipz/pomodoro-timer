@@ -19,11 +19,19 @@ function ClockSettings({ sessionLength, breakLength, changeSessionLength, change
     }
 
     const breakDecrement = () => {
-        changeBreakLength(breakLength - 1);
+        if (breakLength > 1) {
+            changeBreakLength(breakLength - 1);
+        } else {
+            alert('Break length must be greater than 1 minute.');
+        }
     }
 
     const breakIncrement = () => {
-        changeBreakLength(breakLength + 1);
+        if (breakLength < 60) {
+            changeBreakLength(breakLength + 1);
+        } else {
+            alert('Break length must be less than 60 minutes.');
+        }
     }
 
     return (
