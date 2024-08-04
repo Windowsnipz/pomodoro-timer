@@ -4,7 +4,7 @@ function Clock() {
     return (
         <>
             <div>
-                <h1>Pomodor Timer</h1>
+                <h1>Pomodoro Timer</h1>
             </div>
             <div id="clock-wrapper">
                 <div id="break-label">
