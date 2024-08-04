@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLength }) { 
-    
-    let minutes = sessionLength;
-    let seconds = 0;
+        const [minutes, setMinutes] = useState(sessionLength);
+        const [secoonds, setSeconds] = useState(0);
+        const [isActive, setIsActive] = useState(false); // track if timer active
+        const [isSesssion, setIsSession] = useState(true); // track if it's session time
+
+
+    useEffect(() => {
+        let timer;
+
+        if (isActive) {
+            timer = setInterval(() => {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        // Switch between session and break
+                        alert('SESSION OVER');
+                        setIsSession(!isSesssion);
+                        setMinutes(isSession ? breakLength : sessionLength);
+                        setSeconds(0);
+                    } else {
+                        setMinutes((prevMinutes) => prevMinutes - 1);
+                        setSeconds(59);
+                    }
+                } else {
+                    setSeconds((prevSeconds) => prevSeconds - 1);
+                }
+            }, 1000) // 1 second per interval
+        }
+    })
+
 
     const reset = () => {
         changeSessionLength(25);
         changeBreakLength(5);
-    }
-
-    const sessionClockTicking = () => {
-
     }
 
     const breakClockTicking = () => {
