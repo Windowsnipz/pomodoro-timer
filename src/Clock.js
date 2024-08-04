@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Clock() { 
+function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLength }) { 
+
+    const reset = () => {
+        changeSessionLength(25);
+        changeBreakLength(5);
+    }
+
     return (
         <>
             <div>
@@ -9,7 +15,7 @@ function Clock() {
             </div>
             <div>
                 <button id="start_stop">Start/Stop</button>
-                <button id="reset">Reset</button>
+                <button id="reset" onClick={reset}>Reset</button>
             </div>
         </>
     );

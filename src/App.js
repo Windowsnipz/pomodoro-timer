@@ -16,7 +16,12 @@ function App() { // Reminder: put Navbar back in
         changeSessionLength={setSessionLength}
         changeBreakLength={setBreakLength}
         />
-      <Clock sessionLength={sessionLength} breakLength={breakLength} />
+      <Clock 
+        sessionLength={sessionLength}
+        breakLength={breakLength} 
+        changeSessionLength={setSessionLength}
+        changeBreakLength={setBreakLength} 
+        />
     </div>
   );
 }
