@@ -5,6 +5,7 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
         const [seconds, setSeconds] = useState(0);
         const [isActive, setIsActive] = useState(false); // track if timer active
         const [isSession, setIsSession] = useState(true); // track if it's session time
+        const [audio] = useState(new Audio('./w3-effect.mp3'));
 
     // Update minutes and seconds when sessionLength or breakLength changes
     useEffect(() => {
@@ -21,7 +22,7 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
                 if (seconds === 0) {
                     if (minutes === 0) {
                         // Switch between session and break
-                        alert('SESSION OVER');
+                        audio.play();
                         setIsSession(!isSession);
                         setMinutes(isSession ? breakLength : sessionLength);
                         setSeconds(0);
