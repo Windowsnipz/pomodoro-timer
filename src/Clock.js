@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLength }) { 
         const [minutes, setMinutes] = useState(sessionLength);
         const [seconds, setSeconds] = useState(0);
         const [isActive, setIsActive] = useState(false); // track if timer active
         const [isSession, setIsSession] = useState(true); // track if it's session time
-        const [audio] = useState(new Audio('./w3-effect.mp3'));
+        const audioRef = useRef(null) // creates a ref for the audio element
 
     // Update minutes and seconds when sessionLength or breakLength changes
     useEffect(() => {
@@ -22,7 +22,9 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
                 if (seconds === 0) {
                     if (minutes === 0) {
                         // Switch between session and break
-                        audio.play();
+                        if (audioRef.current) {
+                            audioRef.current.play(); // plays sound using the audio element
+                        }
                         setIsSession(!isSession);
                         setMinutes(isSession ? breakLength : sessionLength);
                         setSeconds(0);
@@ -68,6 +70,7 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
                     {isActive ? 'Stop' : 'Start'}
                 </button>
                 <button id="reset" onClick={reset}>Reset</button>
+                <audio id="beep" ref={audioRef} src="./w3-effect.mp3" />
             </div>
         </>
     );
