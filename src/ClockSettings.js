@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ClockSettings() {
+function ClockSettings({ defaultSessionLength, defaultBreakLength, changeSessionLength, changeBreakLength }) {
     return (
         <>
             <h1>Pomodoro Timer</h1>
