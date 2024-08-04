@@ -3,11 +3,19 @@ import React from 'react';
 function ClockSettings({ sessionLength, breakLength, changeSessionLength, changeBreakLength }) {
 
     const sessionDecrement = () => {
-        changeSessionLength(sessionLength - 1);
+        if (sessionLength > 1) {
+            changeSessionLength(sessionLength - 1);
+        } else {
+            alert('Session length must be greater than 1 minute.');
+        }
     }
 
     const sessionIncrement = () => {
-        changeSessionLength(sessionLength + 1);
+        if (sessionLength < 60) {
+            changeSessionLength(sessionLength + 1);
+        } else {
+            alert('Session length must be less than 60 minutes.');
+        }
     }
 
     const breakDecrement = () => {
@@ -38,7 +46,7 @@ function ClockSettings({ sessionLength, breakLength, changeSessionLength, change
                 <div>
                     <button id="session-decrement" onClick={sessionDecrement}>Decrement</button>
                     <h3 id="session-length">{sessionLength}</h3>
-                    <button id="session-increment" onClick={sessionIncrement}>increment</button>
+                    <button id="session-increment" onClick={sessionIncrement}>Increment</button>
                 </div>
             </div>
         </>
