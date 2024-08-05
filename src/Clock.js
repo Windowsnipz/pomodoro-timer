@@ -50,6 +50,10 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
         setIsSession(true);
         changeSessionLength(25);
         changeBreakLength(5);
+        if (audioRef.current) {
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0; // rewinds audio
+        }
     }
 
     const toggleTimer = () => {
