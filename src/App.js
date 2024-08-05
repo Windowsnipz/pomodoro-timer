@@ -10,6 +10,7 @@ function App() { // Reminder: put Navbar back in
 
   return (
     <div className="App">
+      <Navbar />
       <ClockSettings 
         sessionLength={sessionLength}
         breakLength={breakLength} 

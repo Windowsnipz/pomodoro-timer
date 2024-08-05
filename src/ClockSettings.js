@@ -27,7 +27,7 @@ function ClockSettings({ sessionLength, breakLength, changeSessionLength, change
     }
 
     return (
-        <>
+        <div class="box">
             <h1>Pomodoro Timer</h1>
             <div id="break-label">
                 <div>
@@ -49,7 +49,7 @@ function ClockSettings({ sessionLength, breakLength, changeSessionLength, change
                     <button id="session-increment" onClick={sessionIncrement}>Increment</button>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

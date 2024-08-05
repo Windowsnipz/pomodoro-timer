@@ -87,7 +87,7 @@ code {
 }
 
 /* Section class*/
-#quote-box {
+.box {
   width: 75%;
   max-width: 900px;
   color: var(--blue1);
@@ -96,7 +96,7 @@ code {
   border-radius: 30px;
   background-color: var(--gray1);
   scroll-margin-top: 10vh; /* Ensures correct scrolling from the navbar */
-  margin-top: 130px /* margin below navbar, removed for React*/
+  margin-top: 0px /* margin below navbar, removed for React*/
 }
 
 

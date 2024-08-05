@@ -61,7 +61,7 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
     }
 
     return (
-        <>
+        <div class="box">
             <div>
                 <h3 id="timer-label">{isSession ? 'Session' : 'Break'}</h3>
                 <h1 id="time-left">
@@ -76,7 +76,7 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
                 <button id="reset" onClick={reset}>Reset</button>
                 <audio id="beep" ref={audioRef} src="./w3-effect.mp3" />
             </div>
-        </>
+        </div>
     );
 }
 
