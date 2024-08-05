@@ -84,6 +84,9 @@ code {
   main div {
       width: 10%;
   }
+  .box {
+    width: 10%;
+  }
 }
 
 /* Section class*/
@@ -96,7 +99,17 @@ code {
   border-radius: 30px;
   background-color: var(--gray1);
   scroll-margin-top: 10vh; /* Ensures correct scrolling from the navbar */
-  margin-top: 130px /* margin below navbar, removed for React*/
+  margin-top: 30px /* margin below navbar, removed for React*/
+}
+
+.box:first-of-type {
+  margin-top: 130px /* margin below navbar, removed for React*/ 
+}
+
+@media (min-width: 1000px) {
+  .box {
+    width: 25%;
+  }
 }
 
 .timer-settings {
@@ -109,17 +122,22 @@ code {
 .btn {
   display: block;
   margin: 5px auto;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 8px;
   font-family: Helvetica, sans-serif;
   /*font-weight: 900;*/
   font-size: large;
-  border-radius: 100%;
+  border-radius: 5px;
   border: 1px solid var(--gray1);
   color: var(--blue1);
   background-color: var(--gray1);
   transition: color 0.2s, background-color 0.2s;
+}
+
+#session-increment, #session-decrement, #break-increment, #break-decrement {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 100%;
 }
 
 .btn:hover {

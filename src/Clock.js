@@ -70,10 +70,10 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
                 </h1>
             </div>
             <div>
-                <button id="start_stop" onClick={toggleTimer}>
+                <button id="start_stop" class="btn" onClick={toggleTimer}>
                     {isActive ? 'Stop' : 'Start'}
                 </button>
-                <button id="reset" onClick={reset}>Reset</button>
+                <button id="reset" class="btn" onClick={reset}>Reset</button>
                 <audio id="beep" ref={audioRef} src="./w3-effect.mp3" />
             </div>
         </div>
