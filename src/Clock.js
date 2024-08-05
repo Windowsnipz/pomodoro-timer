@@ -69,7 +69,7 @@ function Clock({ sessionLength, breakLength, changeSessionLength, changeBreakLen
                     {seconds < 10 ? "0" + seconds : seconds }
                 </h1>
             </div>
-            <div>
+            <div id="button-container">
                 <button id="start_stop" class="btn" onClick={toggleTimer}>
                     {isActive ? 'Stop' : 'Start'}
                 </button>

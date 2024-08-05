@@ -152,6 +152,12 @@ code {
   background-color: var(--orange1);
 }
 
+#button-container {
+  display: flex;
+  width: 55%;
+  margin: auto;
+}
+
 /* Footer */
 footer {
   position: absolute;
