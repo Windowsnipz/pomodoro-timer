@@ -33,20 +33,20 @@ function ClockSettings({ sessionLength, breakLength, changeSessionLength, change
                 <div>
                     <h3>Break Length</h3>
                 </div>
-                <div>
-                    <button id="break-decrement" onClick={breakDecrement}>Decrement</button>
+                <div class="timer-settings">
+                    <button id="break-decrement" class="btn" onClick={breakDecrement}>-</button>
                     <h3 id="break-length">{breakLength}</h3>
-                    <button id="break-increment" onClick={breakIncrement}>Increment</button>
+                    <button id="break-increment" class="btn" onClick={breakIncrement}>+</button>
                 </div>
             </div>
             <div id="session-label">
                 <div>
                     <h3>Session Length</h3>
                 </div>
-                <div>
-                    <button id="session-decrement" onClick={sessionDecrement}>Decrement</button>
+                <div class="timer-settings">
+                    <button id="session-decrement" class="btn" onClick={sessionDecrement}>-</button>
                     <h3 id="session-length">{sessionLength}</h3>
-                    <button id="session-increment" onClick={sessionIncrement}>Increment</button>
+                    <button id="session-increment" class="btn" onClick={sessionIncrement}>+</button>
                 </div>
             </div>
         </div>

@@ -96,33 +96,26 @@ code {
   border-radius: 30px;
   background-color: var(--gray1);
   scroll-margin-top: 10vh; /* Ensures correct scrolling from the navbar */
-  margin-top: 0px /* margin below navbar, removed for React*/
+  margin-top: 130px /* margin below navbar, removed for React*/
 }
 
-
-/* Input-wrapper */
-#input-wrapper {
-  border: 2px solid var(--orange1);
-  border-radius: 30px;
-  width: 50%;
+.timer-settings {
+  display: flex;
+  align-items: center;
+  width: 25%;
   margin: auto;
-  margin-top: 25px;
-  padding: 10px;
-  background-color: var(--gray2);
-}
-
-#input-wrapper h4 {
-  padding: 10px 0;
 }
 
 .btn {
   display: block;
   margin: 5px auto;
-  padding: 8px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-family: Helvetica, sans-serif;
   /*font-weight: 900;*/
   font-size: large;
-  border-radius: 5px;
+  border-radius: 100%;
   border: 1px solid var(--gray1);
   color: var(--blue1);
   background-color: var(--gray1);
@@ -139,14 +132,6 @@ code {
 .btn:active {
   color: var(--orange1);
   background-color: var(--orange1);
-}
-
-#tweet-quote { /* anchor element for tweet button */
-  text-decoration: none;
-}
-
-#result-text {
-  margin: auto 50px;
 }
 
 /* Footer */
