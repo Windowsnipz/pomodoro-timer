@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import ClockSettings from './ClockSettings';
 import Clock from './Clock';
 
-function App() { // Reminder: put Navbar back in
+function App() { 
   const [sessionLength, setSessionLength] = useState(25);
   const [breakLength, setBreakLength] = useState(5);
 
