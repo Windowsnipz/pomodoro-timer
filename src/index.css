@@ -149,7 +149,7 @@ code {
 
 .btn:active {
   color: var(--orange1);
-  background-color: var(--orange1);
+  background-color: var(--gray1);
 }
 
 #button-container {
