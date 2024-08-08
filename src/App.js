@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import ClockSettings from './ClockSettings';
 import Clock from './Clock';
+import Footer from './Footer';
 
 function App() { 
   const [sessionLength, setSessionLength] = useState(25);
@@ -23,6 +24,7 @@ function App() {
         changeSessionLength={setSessionLength}
         changeBreakLength={setBreakLength} 
         />
+      <Footer />
     </div>
   );
 }

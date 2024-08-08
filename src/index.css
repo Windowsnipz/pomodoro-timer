@@ -64,6 +64,9 @@ code {
   #nav-links {
       padding-right: 10px;
   }
+  body {
+    background-size: auto;
+  }
 }
 
 @media (max-width: 560px) {
@@ -109,6 +112,10 @@ code {
 
 .box:first-of-type {
   margin-top: 130px /* margin below navbar, removed for React*/ 
+}
+
+.box:last-of-type {
+  margin-bottom: 50px;
 }
 
 @media (min-width: 1000px) {
@@ -165,7 +172,7 @@ code {
 
 /* Footer */
 footer {
-  position: absolute;
+  position:relative;
   width: 100%;
   bottom: 0;
   
