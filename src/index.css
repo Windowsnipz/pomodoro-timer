@@ -1,5 +1,8 @@
 body {
   background-color: var(--gray2);
+  background-image: url('w3b.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,6 +39,7 @@ code {
   height: 10vh;
   border-bottom: 2px solid var(--orange1);
   background: var(--gray1);
+  opacity: 90%; 
 }
 
 #navbar img {
@@ -99,7 +103,8 @@ code {
   border-radius: 30px;
   background-color: var(--gray1);
   scroll-margin-top: 10vh; /* Ensures correct scrolling from the navbar */
-  margin-top: 30px /* margin below navbar, removed for React*/
+  margin-top: 30px; /* margin below navbar, removed for React*/
+  opacity: 90%;
 }
 
 .box:first-of-type {
